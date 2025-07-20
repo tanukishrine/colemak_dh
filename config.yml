@@ -1,37 +1,57 @@
+# sudo xremap --device /dev/input/event6 .config/xremap/config.yml
+# targets keyboard device
+
 modmap:
-  - name: Colemak DH
+  - name: Colemak DH Mod
     remap:
+      KEY_ESC: KEY_GRAVE
+#     KEY_BACKSPACE: KEY_CAPSLOCK
+
       KEY_E: KEY_F
       KEY_R: KEY_P
       KEY_T: KEY_B
-      KEY_Y: KEY_J
-      KEY_U: KEY_L
-      KEY_I: KEY_U
-      KEY_O: KEY_Y
-      KEY_P: KEY_SEMICOLON
+      KEY_Y: KEY_LEFTBRACE
+      KEY_U: KEY_J
+      KEY_I: KEY_L
+      KEY_O: KEY_U
+      KEY_P: KEY_Y
+      KEY_LEFTBRACE: KEY_SEMICOLON
+      KEY_RIGHTBRACE: KEY_APOSTROPHE
+#     KEY_BACKSLASH: KEY_BACKSPACE
+
+      KEY_CAPSLOCK: KEY_ESC
       KEY_S: KEY_R
       KEY_D: KEY_S
       KEY_F: KEY_T
-      KEY_H: KEY_M
-      KEY_J: KEY_N
-      KEY_K: KEY_E
-      KEY_L: KEY_I
-      KEY_SEMICOLON: KEY_O
+      KEY_H: KEY_RIGHTBRACE
+      KEY_J: KEY_M
+      KEY_K: KEY_N
+      KEY_L: KEY_E
+      KEY_SEMICOLON: KEY_I
+      KEY_APOSTROPHE: KEY_O
+
       KEY_Z: KEY_X
       KEY_X: KEY_C
       KEY_C: KEY_D
-      KEY_V: KEY_V
       KEY_B: KEY_Z
-      KEY_N: KEY_K
-      KEY_M: KEY_H
-  - name: Additionals
-    remap:
-      KEY_CAPSLOCK: KEY_ESC
-      KEY_ESC: KEY_GRAVE
+      KEY_N: KEY_SLASH
+      KEY_M: KEY_K
+      KEY_COMMA: KEY_H
+      KEY_DOT: KEY_COMMA
+      KEY_SLASH: KEY_DOT
+#     KEY_UP: KEY_SLASH
+#     KEY_RIGHTSHIFT: KEY_BACKSLASH
+
+#     KEY_LEFTCTRL: KEY_LEFTMETA
+#     KEY_LEFTMETA: KEY_LEFTCTRL
+
+#     KEY_RIGHT: KEY_UP
+#     KEY_FN: KEY_RIGHT
+
 keymap:
   - name: VIM
     remap:
-      M-n: left
-      M-e: down
-      M-i: up
-      M-o: right
+      M-N: left
+      M-E: down
+      M-I: up
+      M-O: right
